@@ -15,7 +15,7 @@ const Dashboard = () => {
   useEffect(() => {
     fetchVideos();
 
-    const socket = io('http://localhost:5000');
+    const socket = io("https://pulse-full-stack.onrender.com");
 
     socket.on('video_processing_started', ({ videoId }) => {
       updateVideoStatus(videoId, 'processing');

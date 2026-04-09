@@ -19,7 +19,7 @@ const Upload = () => {
   useEffect(() => {
     let socket;
     if (status === 'processing' || status === 'complete') {
-      socket = io('http://localhost:5000');
+      socket = io('https://pulse-full-stack.onrender.com');
       
       socket.on('video_processing_progress', (data) => {
         if (data.videoId === videoId) {
