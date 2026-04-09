@@ -21,7 +21,7 @@ const VideoPlayer = ({ video }) => {
   
   const userInfo = localStorage.getItem('userInfo');
   const token = userInfo ? JSON.parse(userInfo).token : null;
-  const streamUrl = `http://localhost:5000/api/videos/stream/${video._id}?token=${token}`; 
+  const streamUrl = `https://pulse-full-stack.onrender.com/api/videos/stream/${video._id}?token=${token}`;
 
   return (
     <div className="w-full bg-black rounded-xl overflow-hidden aspect-video relative group border border-surface-light shadow-inner">
